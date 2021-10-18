@@ -6,10 +6,9 @@ function compareTrue(booleano1, booleano2) {
     return false;
   }
 
-
 // Desafio 2
-function calcArea(base, altura) {
-  
+function calcArea(base, height) {
+  return (base * height) / 2
 }
 
 // Desafio 3
