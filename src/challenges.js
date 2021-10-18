@@ -2,14 +2,14 @@
 function compareTrue(booleano1, booleano2) {
   if (booleano1 === true && booleano2 === true) {
     return true;
-  } else {
+  } 
     return false;
   }
-}
+
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, altura) {
+  
 }
 
 // Desafio 3
