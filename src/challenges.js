@@ -28,24 +28,29 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(array) {
-  array.sort().reverse(); 
-   let count = 1;
+  let number = array[0]; 
+  let count = 0;
     for (let index = 1; index < array.length; index += 1) {
-      if(array[index] == array[0])
-        count += 1;
+      if(array[index] > number) {
+        number = array[index];
+      }
+    }
+    for (let index2 = 0; index2 < array.length; index2 += 1) {
+      if (number === array[index2]) {
+        count += 1
+      }
     }
     return count;
 }
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) { 
-  let cat1 = Math.abs();
-  let cat2 = Math.abs();
-  if (cat1 < cat2) {
+  if (cat1 < Math.abs(mouse - cat2)) {
     return cat1;
-    } else if (cat2 < cat1) {
+  } else if (cat2 < Math.abs(mouse - cat1)) {  
     return cat2;
-    }
+    
+  }
     return mouse;    
 }
 
