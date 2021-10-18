@@ -2,9 +2,9 @@
 function compareTrue(booleano1, booleano2) {
   if (booleano1 === true && booleano2 === true) {
     return true;
-  } 
-    return false;
   }
+  return false;
+}
 
 // Desafio 2
 function calcArea(base, height) {
@@ -17,8 +17,8 @@ function splitSentence(string) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  
 }
 
 // Desafio 5
