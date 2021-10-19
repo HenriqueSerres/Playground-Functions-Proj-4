@@ -107,8 +107,31 @@ function encode(string) {
   
 }
 
-function decode() {
-  // seu código aqui
+function decode(string) {
+  let decodeString = "";
+
+  for (let key in string) {
+    if (string[key] === "1") {
+    decodeString += "a";
+    }
+    else if (string[key] === "2") {
+    decodeString += "e";
+    }
+    else if (string[key] === "3") {
+    decodeString += "i";
+    }
+    else if (string[key] === "4") {
+    decodeString += "o";
+    }
+    else if (string[key] === "5") {
+    decodeString += "u";
+    } else {
+    decodeString += string[key];
+    }
+
+  }
+  return decodeString;
+  
 }
 
 module.exports = {
