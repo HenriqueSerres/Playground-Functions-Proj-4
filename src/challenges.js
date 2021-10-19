@@ -45,25 +45,30 @@ function highestCount(array) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) { 
-  if ((mouse - cat1) < (mouse - cat2)) {
-    return cat1;
-  } else if ((mouse - cat2) < (mouse - cat1)) {  
-    return cat2;    
- }
-    return 'os gatos trombam e o ratto foge';    
-}
+// pesquisei no site codewar o uso Math.abs
+  positionCat1 = Math.abs(mouse - cat1);
+  positionCat2 = Math.abs(mouse - cat2);
 
+  if (positionCat1 < positionCat2) {
+    return 'cat1';
+  } else if (positionCat1 > positionCat2) {
+    return 'cat2';    
+  } else if (positionCat1 == positionCat2){
+    return "os gatos trombam e o rato foge";
+  }
+}
 // Desafio 8
-function fizzBuzz(array) {    
+function fizzBuzz(array) {  
+  let arrayResult = [''];  
   for (let index = 0; index < array.length; index +=1) {
     if (array[index] % 3 == 0 || array[index] % 5 == 0) {
-      return 'fizzBuzz';      
+      return arrayResult.push('fizzBuzz');      
     } else if (array[index] % 3 == 0) {
-      return 'fizz';
+      return arrayResult.push('fizz');
     } else if (array[index] % 5 == 0) {
-      return 'buzz';
+      return arrayResult.push('buzz');
     }
-    return 'bug!'
+    return arrayResult.push('bug!');
   }
 }
 
