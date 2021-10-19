@@ -4,8 +4,26 @@ function techList() {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(phoneNumber) {
+  if (phoneNumber.length !== 11) {
+    return 'Array com tamanho incorreto.';
+}
+  let format = '(xx) xxxxx-xxxx';
+  for (let index = 0; index < phoneNumber.length; index += 1) {
+    
+    let contador = 0;
+  
+  for (let secondIndex = 0; secondIndex < phoneNumber.length; secondIndex += 1) {
+    if (phoneNumber[index] === phoneNumber[secondIndex]){
+      contador += 1;
+    }
+  }
+    if (phoneNumber[index] > 9 || phoneNumber[index] < 0 || contador >= 3) {
+      return "não é possível gerar um número de telefone com esses valores";
+    }
+    format = format.replace('x', phoneNumber[index]);
+  }
+    return format;
 }
 
 // Desafio 12
@@ -35,4 +53,4 @@ module.exports = {
   techList,
   hydrate,
   triangleCheck,
-};
+ };
